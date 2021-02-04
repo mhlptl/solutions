@@ -10,21 +10,21 @@ package solutions;
  */
 public class MoveZeroes {
 	public void moveZeroes(int[] nums) {
-    int i = 0;
-    int j = 0;
-    int n = nums.length;
+		int i = 0;
+		int j = 0;
+		int n = nums.length;
 
-    while(j < n) {
-      if(nums[j] != 0) {
-        swap(nums, i++, j);
-      }
-      j++;
-    }
-  }
+		while(j < n) {
+			if(nums[j] != 0) {
+				swap(nums, i++, j);
+			}
+			j++;
+		}
+	}
 
-  private void swap(int[] nums, int i, int j) {
-    int temp = nums[i];
-    nums[i] = nums[j];
-    nums[j] = temp;
-  }
+	private void swap(int[] nums, int i, int j) {
+		int temp = nums[i];
+		nums[i] = nums[j];
+		nums[j] = temp;
+	}
 }

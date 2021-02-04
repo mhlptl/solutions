@@ -33,11 +33,11 @@ public class SingleNumber {
 	}
 
 	public int solution2(int[] nums) {
-    int res = 0;
-    
-    for(int num: nums) {
-      res = res ^ num;
-    }
-    return res;
+		int res = 0;
+		
+		for(int num: nums) {
+			res = res ^ num;
+		}
+		return res;
 	}
 }

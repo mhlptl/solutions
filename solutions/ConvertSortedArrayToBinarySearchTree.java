@@ -10,22 +10,22 @@ import utils.TreeNode;
  */
 public class ConvertSortedArrayToBinarySearchTree {
 	public TreeNode sortedArrayToBST(int[] nums) {
-    if(nums.length == 0) return null;
-    return createTree(nums, 0, nums.length-1);
-  }
+		if(nums.length == 0) return null;
+		return createTree(nums, 0, nums.length-1);
+	}
 
-  private TreeNode createTree(int[] nums, int lo, int hi) {
-    if(lo > hi) return null;
-    int mid = lo + (hi - lo) / 2;
+	private TreeNode createTree(int[] nums, int lo, int hi) {
+		if(lo > hi) return null;
+		int mid = lo + (hi - lo) / 2;
 
-    TreeNode node = new TreeNode(nums[mid]);
+		TreeNode node = new TreeNode(nums[mid]);
 
-    TreeNode left = createTree(nums, lo, mid-1);
-    TreeNode right = createTree(nums, mid+1, hi);
+		TreeNode left = createTree(nums, lo, mid-1);
+		TreeNode right = createTree(nums, mid+1, hi);
 	
-    node.left = left;
-    node.right = right;
+		node.left = left;
+		node.right = right;
 
-    return node;
-  }
+		return node;
+	}
 }
